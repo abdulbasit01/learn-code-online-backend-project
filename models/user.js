@@ -27,7 +27,8 @@ var userSchema = new mongoose.Schema(
     },
     encry_password: {
       type: String,
-      required: true
+      required: true,
+      
     },
     salt: String,
     role: {
@@ -37,6 +38,10 @@ var userSchema = new mongoose.Schema(
     purchases: {
       type: Array,
       default: []
+    },
+    is_deleted: {
+      type: Boolean,
+      default: false
     }
   },
   { timestamps: true }
